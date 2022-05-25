@@ -359,7 +359,7 @@ No utilizar para registrar detalles acerca del informe de la operación, para es
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"945e95312eb81670a27783e125ab7e63">
+		["MD5-CAM-1.0.1"] = <"1fa45c46070d85a1d7c32c2f2ab6f731">
 		["build_uid"] = <"33afaca3-e291-407c-891f-88c364f4e48e">
 		["revision"] = <"1.4.3">
 	>
@@ -383,7 +383,7 @@ definition
 					}
 				}
 			}
-			ISM_TRANSITION[at0034] matches {    -- X - Procedure planned
+			ISM_TRANSITION[at0034.1] matches {    -- X - Procedure planned
 				current_state matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
@@ -593,6 +593,10 @@ definition
 							DV_TEXT matches {*}
 						}
 					}
+					allow_archetype CLUSTER[at0.1] occurrences matches {0..*} matches {    -- Structured body site
+						include
+							archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.anatomical_location\.v1|openEHR-EHR-CLUSTER\.anatomical_location_circle\.v1|openEHR-EHR-CLUSTER\.anatomical_location_relative\.v2|openEHR-EHR-CLUSTER\.anatomical_location_precise\.v0/}
+					}
 					allow_archetype CLUSTER[at0003] occurrences matches {0..*} matches {    -- Procedure detail
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.anatomical_location(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.anatomical_location_circle(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.anatomical_location_relative(-[a-zA-Z0-9_]+)*\.v2/}
@@ -605,6 +609,24 @@ definition
 					ELEMENT[at0069] occurrences matches {0..*} matches {    -- Procedural difficulty
 						value matches {
 							DV_TEXT matches {*}
+						}
+					}
+					CLUSTER[at0.3] occurrences matches {0..*} matches {    -- CLUSTER
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0.6] occurrences matches {0..1} matches {    -- DV_COUNT
+								value matches {
+									DV_COUNT matches {*}
+								}
+							}
+							ELEMENT[at0.4] occurrences matches {0..1} matches {    -- Body site
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							allow_archetype CLUSTER[at0.5] occurrences matches {0..1} matches {    -- Structured body site
+								include
+									archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.anatomical_location\.v1|openEHR-EHR-CLUSTER\.anatomical_location_circle\.v1|openEHR-EHR-CLUSTER\.anatomical_location_relative\.v2|openEHR-EHR-CLUSTER\.anatomical_location_precise\.v0/}
+							}
 						}
 					}
 					ELEMENT[at0006] occurrences matches {0..*} matches {    -- Complication
@@ -648,31 +670,9 @@ definition
 							DV_TEXT matches {*}
 						}
 					}
-					allow_archetype CLUSTER[at0.1] occurrences matches {0..*} matches {    -- Structured body site
-						include
-							archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.anatomical_location\.v1|openEHR-EHR-CLUSTER\.anatomical_location_circle\.v1|openEHR-EHR-CLUSTER\.anatomical_location_relative\.v2|openEHR-EHR-CLUSTER\.anatomical_location_precise\.v0/}
-					}
 					allow_archetype CLUSTER[at0.2] occurrences matches {0..*} matches {    -- CLUSTER_SLOT
 						include
 							archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.device\.v1/}
-					}
-					CLUSTER[at0.3] occurrences matches {0..*} matches {    -- CLUSTER
-						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0.6] occurrences matches {0..1} matches {    -- DV_COUNT
-								value matches {
-									DV_COUNT matches {*}
-								}
-							}
-							ELEMENT[at0.4] occurrences matches {0..1} matches {    -- Body site
-								value matches {
-									DV_TEXT matches {*}
-								}
-							}
-							allow_archetype CLUSTER[at0.5] occurrences matches {0..1} matches {    -- Structured body site
-								include
-									archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.anatomical_location\.v1|openEHR-EHR-CLUSTER\.anatomical_location_circle\.v1|openEHR-EHR-CLUSTER\.anatomical_location_relative\.v2|openEHR-EHR-CLUSTER\.anatomical_location_precise\.v0/}
-							}
-						}
 					}
 				}
 			}
@@ -912,6 +912,10 @@ ontology
 					text = <"*DV_COUNT (en)">
 					description = <"">
 				>
+				["at0034.1"] = <
+					text = <"Plano de procedimento">
+					description = <"O procedimento a ser realizado é planejado">
+				>
 			>
 		>
 		["sl"] = <
@@ -1113,6 +1117,10 @@ ontology
 				["at0.6"] = <
 					text = <"*DV_COUNT (en)">
 					description = <"">
+				>
+				["at0034.1"] = <
+					text = <"*Procedure planned(en)">
+					description = <"*The procedure to be undertaken is planned.(en)">
 				>
 			>
 		>
@@ -1320,6 +1328,11 @@ ontology
 					text = <"DV_COUNT">
 					description = <"">
 				>
+				["at0034.1"] = <
+					text = <"X - Procedure planned">
+					description = <"This pathway step has been deprecated as it was incorrectly associated with 'initial' status - use the new 'Procedure planned' (at0004) pathway step  which is correctly associated with 'planned' status.">
+					comment = <"(Was: The procedure to be undertaken is planned.)">
+				>
 			>
 		>
 		["ar-sy"] = <
@@ -1522,6 +1535,10 @@ ontology
 					text = <"*DV_COUNT (en)">
 					description = <"">
 				>
+				["at0034.1"] = <
+					text = <"*Procedure planned(en)">
+					description = <"*The procedure to be undertaken is planned.(en)">
+				>
 			>
 		>
 		["ru"] = <
@@ -1723,6 +1740,10 @@ ontology
 				["at0.6"] = <
 					text = <"*DV_COUNT (en)">
 					description = <"">
+				>
+				["at0034.1"] = <
+					text = <"*Procedure planned(en)">
+					description = <"*The procedure to be undertaken is planned.(en)">
 				>
 			>
 		>
@@ -1930,6 +1951,11 @@ ontology
 					text = <"*DV_COUNT (en)">
 					description = <"">
 				>
+				["at0034.1"] = <
+					text = <"X - Prosedyre planlagt">
+					description = <"Dette prosesstrinnet er satt ut av bruk, siden det ved en feil hadde statusen \"initial\". Bruk det nye prosesstrinnet \"Prosedyre planlagt\" (at0004) som har den korrekte statusen \"planned\".">
+					comment = <"(Var: Prosedyren er planlagt.)">
+				>
 			>
 		>
 		["es"] = <
@@ -2132,6 +2158,10 @@ ontology
 				["at0.6"] = <
 					text = <"*DV_COUNT (en)">
 					description = <"">
+				>
+				["at0034.1"] = <
+					text = <"Procedimiento planificado">
+					description = <"Está previsto que el procedimiento que se ha llevado a cabo.">
 				>
 			>
 		>
@@ -2338,6 +2368,11 @@ ontology
 				["at0.6"] = <
 					text = <"*DV_COUNT (en)">
 					description = <"">
+				>
+				["at0034.1"] = <
+					text = <"X - Prozedur geplant">
+					description = <"Dieses Element ist veraltet, da es fälschlicherweise mit dem Status \"initial\" verknüpft war - verwenden Sie das neue Element \"Prozedur geplant\" (at0004), das korrekt mit dem Status \"geplant\" verknüpft ist.">
+					comment = <"(War: Die Prozedur, die durchgeführt werden soll, ist geplant.)">
 				>
 			>
 		>
@@ -2554,6 +2589,12 @@ Exempel: Hematuri efter njurbiopsi, vävnadsirritation efter införande av intra
 				["at0.6"] = <
 					text = <"Antal">
 					description = <"">
+				>
+				["at0034.1"] = <
+					text = <"X - Procedur planerad">
+					description = <"Detta vägsteg har upphört att gälla eftersom det felaktigt var associerat med \"initial\" status - använd det nya \"Procedur planerad\" (at0004) vägsteget som är korrekt associerat med \"planerat\" status. 
+">
+					comment = <"(Was: The procedure to be undertaken is planned.)(en)">
 				>
 			>
 		>

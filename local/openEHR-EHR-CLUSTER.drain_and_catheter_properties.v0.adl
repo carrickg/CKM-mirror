@@ -6,6 +6,13 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sv"] = <
+			language = <[ISO_639-1::sv]>
+			author = <
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -16,6 +23,10 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
+		["sv"] = <
+			language = <[ISO_639-1::sv]>
+			copyright = <"© openEHR Foundation">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 		>
@@ -26,7 +37,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4af11adbc4ea053a53ed827f9ff6fc93">
+		["MD5-CAM-1.0.1"] = <"871e7d8f890d83bb5671375a648c340b">
 		["build_uid"] = <"73006b5b-2fb9-3cb0-924f-a3923d98ff4f">
 	>
 
@@ -105,6 +116,42 @@ ontology
 				["at0008"] = <
 					text = <"Suction level">
 					description = <"Used e.g. for closed active drain systems">
+				>
+			>
+		>
+		["sv"] = <
+			items = <
+				["at0000"] = <
+					text = <"Egenskaper för in- och utfarter">
+					description = <"*drain_and_catheter_properties (en)">
+				>
+				["at0001"] = <
+					text = <"Aktivering">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Aktivt">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Passivt">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Tillstånd">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Öppet">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Stängt">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Sugstyrka">
+					description = <"*Used e.g. for closed active drain systems (en)">
 				>
 			>
 		>

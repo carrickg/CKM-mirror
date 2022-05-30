@@ -359,7 +359,7 @@ No utilizar para registrar detalles acerca del informe de la operación, para es
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"d98acabbc5de075a48369ad75bc0d4e7">
+		["MD5-CAM-1.0.1"] = <"4e08e30979ea7c123a01344ade83dfba">
 		["build_uid"] = <"33afaca3-e291-407c-891f-88c364f4e48e">
 		["revision"] = <"1.4.3">
 	>
@@ -555,6 +555,22 @@ definition
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::at0043]    -- Procedure completed
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0.7] matches {    -- Existing upon arrival (registered from other care unit)
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::245]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0.7]    -- Existing upon arrival (registered from other care unit)
 						}
 					}
 				}
@@ -916,6 +932,10 @@ ontology
 					description = <"*The clinical or process-related reason for the procedure. (en)">
 					comment = <"*Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. For example: 'Failed bowel preparation' or 'Bowel cancer screening'. (en)">
 				>
+				["at0.7"] = <
+					text = <"*Existing upon arrival (registered from other care unit) (en)">
+					description = <"">
+				>
 			>
 		>
 		["sl"] = <
@@ -1121,6 +1141,10 @@ ontology
 					text = <"*Indication (en)">
 					description = <"*The clinical or process-related reason for the procedure. (en)">
 					comment = <"*Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. For example: 'Failed bowel preparation' or 'Bowel cancer screening'. (en)">
+				>
+				["at0.7"] = <
+					text = <"*Existing upon arrival (registered from other care unit) (en)">
+					description = <"">
 				>
 			>
 		>
@@ -1333,6 +1357,10 @@ ontology
 					description = <"The clinical or process-related reason for the procedure.">
 					comment = <"Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. For example: 'Failed bowel preparation' or 'Bowel cancer screening'.">
 				>
+				["at0.7"] = <
+					text = <"Existing upon arrival (registered from other care unit)">
+					description = <"">
+				>
 			>
 		>
 		["ar-sy"] = <
@@ -1539,6 +1567,10 @@ ontology
 					description = <"*The clinical or process-related reason for the procedure. (en)">
 					comment = <"*Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. For example: 'Failed bowel preparation' or 'Bowel cancer screening'. (en)">
 				>
+				["at0.7"] = <
+					text = <"*Existing upon arrival (registered from other care unit) (en)">
+					description = <"">
+				>
 			>
 		>
 		["ru"] = <
@@ -1744,6 +1776,10 @@ ontology
 					text = <"*Indication (en)">
 					description = <"*The clinical or process-related reason for the procedure. (en)">
 					comment = <"*Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. For example: 'Failed bowel preparation' or 'Bowel cancer screening'. (en)">
+				>
+				["at0.7"] = <
+					text = <"*Existing upon arrival (registered from other care unit) (en)">
+					description = <"">
 				>
 			>
 		>
@@ -1956,6 +1992,10 @@ ontology
 					description = <"Den kliniske eller prosessrelaterte årsaken til prosedyren.">
 					comment = <"Koding av indikasjon med en terminologi er foretrukket, om mulig. Dette dataelementet kan repeteres. For eksempel \"Brudd i arm\" eller \"Mislykket tarmtømming\" , \"Tarmkreftscreening\" eller \"Pakkeforløp for kreft\".">
 				>
+				["at0.7"] = <
+					text = <"*Existing upon arrival (registered from other care unit) (en)">
+					description = <"">
+				>
 			>
 		>
 		["es"] = <
@@ -2162,6 +2202,10 @@ ontology
 					text = <"*Indication (en)">
 					description = <"*The clinical or process-related reason for the procedure. (en)">
 					comment = <"*Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. For example: 'Failed bowel preparation' or 'Bowel cancer screening'. (en)">
+				>
+				["at0.7"] = <
+					text = <"*Existing upon arrival (registered from other care unit) (en)">
+					description = <"">
 				>
 			>
 		>
@@ -2374,6 +2418,10 @@ ontology
 					description = <"Der klinische oder prozessbezogene Grund für die Prozedur.">
 					comment = <"Die Kodierung der Indikation mit einer Terminologie wird nach Möglichkeit bevorzugt. Dieses Datenelement ermöglicht mehrere Vorkommen. Zum Beispiel: \"Fehlgeschlagenen Darmvorbereitung\" oder \"Darmkrebsvorsorge\".">
 				>
+				["at0.7"] = <
+					text = <"*Existing upon arrival (registered from other care unit) (en)">
+					description = <"">
+				>
 			>
 		>
 		["sv"] = <
@@ -2398,6 +2446,7 @@ ontology
 				["at0.3"] = <
 					text = <"Stickförsök">
 					description = <"">
+					comment = <"Ska brytas ut!">
 				>
 				["at0.4"] = <
 					text = <"Anatomisk Lokalisation">
@@ -2595,6 +2644,10 @@ Exempel: Hematuri efter njurbiopsi, vävnadsirritation efter införande av intra
 					text = <"Indikation">
 					description = <"Den kliniska eller processrelaterade orsaken till ingreppet.">
 					comment = <"Kodning av indikationen med en terminologi är att föredra, där det är möjligt. Detta dataelement tillåter flera förekomster. Till exempel: 'Misslyckad tarmberedning' eller 'Screening av tarmcancer'.">
+				>
+				["at0.7"] = <
+					text = <"*Existing upon arrival (registered from other care unit) (en)">
+					description = <"">
 				>
 			>
 		>

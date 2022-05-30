@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.0",
+      "sem_ver" : "0.2.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "f90550ee95ce2276d7ef7e2f1789899a",
+      "MD5-CAM-1.0.1" : "9c7cfe61b47634524af9ca17ad2a53dd",
       "PARENT:MD5-CAM-1.0.1" : "8FE80F3E80C594AAF99D3BA540A53D73"
     },
     "details" : {
@@ -160,27 +160,7 @@
     "@type" : "C_COMPLEX_OBJECT",
     "rmTypeName" : "SECTION",
     "nodeId" : "at0000.1",
-    "attributes" : [ {
-      "@type" : "C_ATTRIBUTE",
-      "rmAttributeName" : "items",
-      "existence" : "0..1",
-      "cardinality" : {
-        "@type" : "CARDINALITY",
-        "interval" : "1..*",
-        "ordered" : false,
-        "unique" : false
-      },
-      "children" : [ {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "INSTRUCTION",
-        "occurrences" : "0..1",
-        "nodeId" : "at0.2",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-INSTRUCTION.ovl-drain_and_catheter_care_order-001.v0",
-        "referenceType" : "archetypeOverlay"
-      } ]
-    } ],
+    "attributes" : [ ],
     "attributeTuples" : [ ]
   },
   "terminology" : {
@@ -279,72 +259,7 @@
   "generated" : true,
   "templateId" : "drain-and-catheter-care-section",
   "otherMetaData" : { },
-  "templateOverlays" : [ {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "039d10ce-3398-4bec-b56b-69779f9852c2",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "6114962dcc8c6f2fb88c58c6f2fd6f5f"
-      },
-      "details" : { }
-    },
-    "parentArchetypeId" : "openEHR-EHR-INSTRUCTION.drain_and_catheter_care_order.v0",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-INSTRUCTION.ovl-drain_and_catheter_care_order-001.v0"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "INSTRUCTION",
-      "nodeId" : "at0000.1",
-      "attributes" : [ ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "de" : { },
-        "en" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "36c08423-43cb-4909-9903-e936ab0e048a",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "de"
-      },
-      "author" : {
-        "name" : "Jasmin Buck, Sebastian Garde",
-        "organisation" : "University of Heidelberg, Central Queensland University"
-      },
-      "otherDetails" : { }
-    } ]
-  } ],
+  "templateOverlays" : [ ],
   "originalLanguage" : {
     "terminologyId" : {
       "value" : "ISO_639-1"

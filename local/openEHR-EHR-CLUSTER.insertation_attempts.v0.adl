@@ -26,12 +26,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"d1ae0bf18f4ba8289ff036bc60940140">
+		["MD5-CAM-1.0.1"] = <"be06e50fed4a0a374f991a9629b75bf7">
 		["build_uid"] = <"34176335-aecc-371a-ad3e-8c8bbe429892">
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- insertation_attempts
+	CLUSTER[at0000] matches {    -- Insertation attempts
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[at0.6] occurrences matches {0..1} matches {    -- Element
 				value matches {
@@ -56,7 +56,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"insertation_attempts">
+					text = <"Insertation attempts">
 					description = <"insertation_attempts">
 				>
 				["at0.3"] = <

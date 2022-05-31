@@ -1,0 +1,46 @@
+archetype (adl_version=1.4; uid=ea0414df-99a1-45d4-9074-8e9fde478682)
+	openEHR-EHR-CLUSTER.insertion_attempts.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Erik Sundvall">
+		["organisation"] = <"Karolinska University hospital + Institute & Linköping University, Sweden">
+		["email"] = <"erik.sundvall@regionstockholm.se">
+		["date"] = <"2022-05-31">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"2b705b039151e2281a68e24b3eee15f5">
+		["build_uid"] = <"21d6b218-af55-367a-83e2-fec9fa774695">
+	>
+
+definition
+	CLUSTER[at0000] matches {*}    -- insertion_attempts
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"insertion_attempts">
+					description = <"insertion_attempts">
+				>
+			>
+		>
+	>

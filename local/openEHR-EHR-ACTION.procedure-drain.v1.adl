@@ -127,14 +127,6 @@ Nicht zu verwenden, um Angaben über zusammenhängende Aktivitäten zu erfassen.
 
 Nicht zur Erfassung eines vollständigen Berichts über eine OP- oder eine Prozedur - verwenden Sie ein Template, in der dieser Archetyp nur eine Komponente des Gesamtberichts darstellt.">
 		>
-		["ru"] = <
-			language = <[ISO_639-1::ru]>
-			purpose = <"Для записи сведений об проведенной процедуре">
-			keywords = <"процедура, выполнение", ...>
-			copyright = <"© openEHR Foundation">
-			use = <"Используется для записи подробной информации о процедуре, выполненной пациенту.
-Информация о действиях, связанных с выполнением процедуры, таких как анестезия или применение лекарств, долдно быть записано в отдельных архетипах типа ДЕЙСТВИЕ">
-		>
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
 			purpose = <"Att registrera information om de aktiviteter som krävs för att genomföra en procedur, inklusive planering, schemaläggning, utförande, avstängning, avbokning, dokumentation och slutförande. 
@@ -186,6 +178,14 @@ Får inte användas för att registrera detaljer om relaterade aktiviteter, sås
 
 Används inte för att registrera en hel operation eller procedurrapport - använd en mall där den här arketypen bara är en komponent i hela rapporten.
 ">
+		>
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"Для записи сведений об проведенной процедуре">
+			keywords = <"процедура, выполнение", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"Используется для записи подробной информации о процедуре, выполненной пациенту.
+Информация о действиях, связанных с выполнением процедуры, таких как анестезия или применение лекарств, долдно быть записано в отдельных архетипах типа ДЕЙСТВИЕ">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
@@ -276,6 +276,21 @@ Não deve ser usado para gravar detalhes sobre as atividades relacionadas, tais 
 
 Não deve ser usado para gravar uma operação ou procedimento relatório conjunto - usar um modelo em que esse arquétipo é apenas um componente do relatório completo.">
 		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"Za beleženje podrobnosti o izvedeni aktivnosti">
+			keywords = <"aktivnosti","postopek">
+			copyright = <"© openEHR Foundation">
+			use = <"Za beleženje podrobnosto o izvedeni aktivnosti, ki zadeva posameznega pacienta/subjekt">
+			misuse = <"Podrobnosti o aktivnostih povezani z opisano kativnostjo, kot npr. dajanje zdravil, se zabeleži v arhetipih tipa ACTION">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"لتسجيل تفاصيل حول إجراء طبي تم بالفعل إجراؤه">
+			keywords = <"الإجراء الطبي", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"لتسجيل معلومات تفصيلية حول إجراء طبي تم تنفيذه على شخص ما. و ينبغي تسجيل المعلومات حول النشاطات المتعلقة بالنشاطات المتعلقة بالإجراء الطبي, مثل التخدير أو إعطاء الأدوية في نماذج (فعل) منفردة.">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record information about the activities required to carry out a procedure, including the planning, scheduling, performance, suspension, cancellation, documentation and completion.">
@@ -320,21 +335,6 @@ Not to be used to record details about related activities such as the use of fro
 
 Not to be used to record a whole operation or procedure report - use a template in which this archetype is only one component of the full report.">
 		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			purpose = <"لتسجيل تفاصيل حول إجراء طبي تم بالفعل إجراؤه">
-			keywords = <"الإجراء الطبي", ...>
-			copyright = <"© openEHR Foundation">
-			use = <"لتسجيل معلومات تفصيلية حول إجراء طبي تم تنفيذه على شخص ما. و ينبغي تسجيل المعلومات حول النشاطات المتعلقة بالنشاطات المتعلقة بالإجراء الطبي, مثل التخدير أو إعطاء الأدوية في نماذج (فعل) منفردة.">
-		>
-		["sl"] = <
-			language = <[ISO_639-1::sl]>
-			purpose = <"Za beleženje podrobnosti o izvedeni aktivnosti">
-			keywords = <"aktivnosti","postopek">
-			copyright = <"© openEHR Foundation">
-			use = <"Za beleženje podrobnosto o izvedeni aktivnosti, ki zadeva posameznega pacienta/subjekt">
-			misuse = <"Podrobnosti o aktivnostih povezani z opisano kativnostjo, kot npr. dajanje zdravil, se zabeleži v arhetipih tipa ACTION">
-		>
 		["es"] = <
 			language = <[ISO_639-1::es]>
 			purpose = <"Para registrar información sobre las actividades requeridas para ejecutar un procedimiento, incluyendo planificación, coordinación, ejecución, suspensión, cancelación, documentación y finalización.">
@@ -359,7 +359,7 @@ No utilizar para registrar detalles acerca del informe de la operación, para es
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4e08e30979ea7c123a01344ade83dfba">
+		["MD5-CAM-1.0.1"] = <"d33994f601becfe3c43afd33c71e339c">
 		["build_uid"] = <"33afaca3-e291-407c-891f-88c364f4e48e">
 		["revision"] = <"1.4.3">
 	>
@@ -767,6 +767,10 @@ ontology
 					text = <"Plano de procedimento">
 					description = <"O procedimento a ser realizado é planejado">
 				>
+				["at0.7"] = <
+					text = <"*Existing upon arrival (registered from other care unit) (en)">
+					description = <"">
+				>
 				["at0000"] = <
 					text = <"Procedimento">
 					description = <"A atividade clínica realizada para rastreamento , investigação , diagnóstico , cura , terapêutica, avaliação ou finalidade paliativos.">
@@ -932,10 +936,6 @@ ontology
 					description = <"*The clinical or process-related reason for the procedure. (en)">
 					comment = <"*Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. For example: 'Failed bowel preparation' or 'Bowel cancer screening'. (en)">
 				>
-				["at0.7"] = <
-					text = <"*Existing upon arrival (registered from other care unit) (en)">
-					description = <"">
-				>
 			>
 		>
 		["sl"] = <
@@ -977,6 +977,10 @@ ontology
 				["at0034.1"] = <
 					text = <"*Procedure planned(en)">
 					description = <"*The procedure to be undertaken is planned.(en)">
+				>
+				["at0.7"] = <
+					text = <"*Existing upon arrival (registered from other care unit) (en)">
+					description = <"">
 				>
 				["at0000"] = <
 					text = <"*Procedure(en)">
@@ -1142,10 +1146,6 @@ ontology
 					description = <"*The clinical or process-related reason for the procedure. (en)">
 					comment = <"*Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. For example: 'Failed bowel preparation' or 'Bowel cancer screening'. (en)">
 				>
-				["at0.7"] = <
-					text = <"*Existing upon arrival (registered from other care unit) (en)">
-					description = <"">
-				>
 			>
 		>
 		["en"] = <
@@ -1188,6 +1188,10 @@ ontology
 					text = <"X - Procedure planned">
 					description = <"This pathway step has been deprecated as it was incorrectly associated with 'initial' status - use the new 'Procedure planned' (at0004) pathway step  which is correctly associated with 'planned' status.">
 					comment = <"(Was: The procedure to be undertaken is planned.)">
+				>
+				["at0.7"] = <
+					text = <"Existing upon arrival (registered from other care unit)">
+					description = <"">
 				>
 				["at0000"] = <
 					text = <"Procedure">
@@ -1357,10 +1361,6 @@ ontology
 					description = <"The clinical or process-related reason for the procedure.">
 					comment = <"Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. For example: 'Failed bowel preparation' or 'Bowel cancer screening'.">
 				>
-				["at0.7"] = <
-					text = <"Existing upon arrival (registered from other care unit)">
-					description = <"">
-				>
 			>
 		>
 		["ar-sy"] = <
@@ -1402,6 +1402,10 @@ ontology
 				["at0034.1"] = <
 					text = <"*Procedure planned(en)">
 					description = <"*The procedure to be undertaken is planned.(en)">
+				>
+				["at0.7"] = <
+					text = <"*Existing upon arrival (registered from other care unit) (en)">
+					description = <"">
 				>
 				["at0000"] = <
 					text = <"*Procedure(en)">
@@ -1567,10 +1571,6 @@ ontology
 					description = <"*The clinical or process-related reason for the procedure. (en)">
 					comment = <"*Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. For example: 'Failed bowel preparation' or 'Bowel cancer screening'. (en)">
 				>
-				["at0.7"] = <
-					text = <"*Existing upon arrival (registered from other care unit) (en)">
-					description = <"">
-				>
 			>
 		>
 		["ru"] = <
@@ -1612,6 +1612,10 @@ ontology
 				["at0034.1"] = <
 					text = <"*Procedure planned(en)">
 					description = <"*The procedure to be undertaken is planned.(en)">
+				>
+				["at0.7"] = <
+					text = <"*Existing upon arrival (registered from other care unit) (en)">
+					description = <"">
 				>
 				["at0000"] = <
 					text = <"*Procedure(en)">
@@ -1777,10 +1781,6 @@ ontology
 					description = <"*The clinical or process-related reason for the procedure. (en)">
 					comment = <"*Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. For example: 'Failed bowel preparation' or 'Bowel cancer screening'. (en)">
 				>
-				["at0.7"] = <
-					text = <"*Existing upon arrival (registered from other care unit) (en)">
-					description = <"">
-				>
 			>
 		>
 		["nb"] = <
@@ -1823,6 +1823,10 @@ ontology
 					text = <"X - Prosedyre planlagt">
 					description = <"Dette prosesstrinnet er satt ut av bruk, siden det ved en feil hadde statusen \"initial\". Bruk det nye prosesstrinnet \"Prosedyre planlagt\" (at0004) som har den korrekte statusen \"planned\".">
 					comment = <"(Var: Prosedyren er planlagt.)">
+				>
+				["at0.7"] = <
+					text = <"*Existing upon arrival (registered from other care unit) (en)">
+					description = <"">
 				>
 				["at0000"] = <
 					text = <"Prosedyre">
@@ -1992,10 +1996,6 @@ ontology
 					description = <"Den kliniske eller prosessrelaterte årsaken til prosedyren.">
 					comment = <"Koding av indikasjon med en terminologi er foretrukket, om mulig. Dette dataelementet kan repeteres. For eksempel \"Brudd i arm\" eller \"Mislykket tarmtømming\" , \"Tarmkreftscreening\" eller \"Pakkeforløp for kreft\".">
 				>
-				["at0.7"] = <
-					text = <"*Existing upon arrival (registered from other care unit) (en)">
-					description = <"">
-				>
 			>
 		>
 		["es"] = <
@@ -2037,6 +2037,10 @@ ontology
 				["at0034.1"] = <
 					text = <"Procedimiento planificado">
 					description = <"Está previsto que el procedimiento que se ha llevado a cabo.">
+				>
+				["at0.7"] = <
+					text = <"*Existing upon arrival (registered from other care unit) (en)">
+					description = <"">
 				>
 				["at0000"] = <
 					text = <"Procedimiento">
@@ -2203,10 +2207,6 @@ ontology
 					description = <"*The clinical or process-related reason for the procedure. (en)">
 					comment = <"*Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. For example: 'Failed bowel preparation' or 'Bowel cancer screening'. (en)">
 				>
-				["at0.7"] = <
-					text = <"*Existing upon arrival (registered from other care unit) (en)">
-					description = <"">
-				>
 			>
 		>
 		["de"] = <
@@ -2249,6 +2249,10 @@ ontology
 					text = <"X - Prozedur geplant">
 					description = <"Dieses Element ist veraltet, da es fälschlicherweise mit dem Status \"initial\" verknüpft war - verwenden Sie das neue Element \"Prozedur geplant\" (at0004), das korrekt mit dem Status \"geplant\" verknüpft ist.">
 					comment = <"(War: Die Prozedur, die durchgeführt werden soll, ist geplant.)">
+				>
+				["at0.7"] = <
+					text = <"*Existing upon arrival (registered from other care unit) (en)">
+					description = <"">
 				>
 				["at0000"] = <
 					text = <"Prozedur">
@@ -2418,10 +2422,6 @@ ontology
 					description = <"Der klinische oder prozessbezogene Grund für die Prozedur.">
 					comment = <"Die Kodierung der Indikation mit einer Terminologie wird nach Möglichkeit bevorzugt. Dieses Datenelement ermöglicht mehrere Vorkommen. Zum Beispiel: \"Fehlgeschlagenen Darmvorbereitung\" oder \"Darmkrebsvorsorge\".">
 				>
-				["at0.7"] = <
-					text = <"*Existing upon arrival (registered from other care unit) (en)">
-					description = <"">
-				>
 			>
 		>
 		["sv"] = <
@@ -2466,6 +2466,10 @@ ontology
 					description = <"Detta vägsteg har upphört att gälla eftersom det felaktigt var associerat med \"initial\" status - använd det nya \"Procedur planerad\" (at0004) vägsteget som är korrekt associerat med \"planerat\" status. 
 ">
 					comment = <"(Was: The procedure to be undertaken is planned.)(en)">
+				>
+				["at0.7"] = <
+					text = <"Registrerad från annan vårdenhet (fanns vid ankomst)">
+					description = <"">
 				>
 				["at0000"] = <
 					text = <"Procedur">
@@ -2644,10 +2648,6 @@ Exempel: Hematuri efter njurbiopsi, vävnadsirritation efter införande av intra
 					text = <"Indikation">
 					description = <"Den kliniska eller processrelaterade orsaken till ingreppet.">
 					comment = <"Kodning av indikationen med en terminologi är att föredra, där det är möjligt. Detta dataelement tillåter flera förekomster. Till exempel: 'Misslyckad tarmberedning' eller 'Screening av tarmcancer'.">
-				>
-				["at0.7"] = <
-					text = <"*Existing upon arrival (registered from other care unit) (en)">
-					description = <"">
 				>
 			>
 		>

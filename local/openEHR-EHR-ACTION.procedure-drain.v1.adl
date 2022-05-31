@@ -16,10 +16,10 @@ language
 
 description
 	original_author = <
+		["date"] = <"2022-05-30">
 		["name"] = <"Erik Sundvall">
 		["organisation"] = <"Karolinska University hospital + Institute & Linköping University, Sweden">
 		["email"] = <"erik.sundvall@regionstockholm.se">
-		["date"] = <"2022-05-30">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <

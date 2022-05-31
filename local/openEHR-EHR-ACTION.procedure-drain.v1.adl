@@ -359,13 +359,13 @@ No utilizar para registrar detalles acerca del informe de la operación, para es
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4a9785170dd8694077d3d3ff0eb2df37">
+		["MD5-CAM-1.0.1"] = <"e7251d06437fbe33ee9e3056c627440c">
 		["build_uid"] = <"33afaca3-e291-407c-891f-88c364f4e48e">
 		["revision"] = <"1.4.3">
 	>
 
 definition
-	ACTION[at0000.1] matches {    -- Procedure
+	ACTION[at0000.1] matches {    -- Procedure - drain
 		ism_transition matches {
 			ISM_TRANSITION[at0004] matches {    -- Procedure planned
 				current_state matches {
@@ -704,7 +704,7 @@ ontology
 		["pt-br"] = <
 			items = <
 				["at0000.1"] = <
-					text = <"Procedimento">
+					text = <"*Procedure - drain (en)">
 					description = <"A atividade clínica realizada para rastreamento , investigação , diagnóstico , cura , terapêutica, avaliação ou finalidade paliativos.">
 				>
 				["at0063.1"] = <
@@ -895,7 +895,7 @@ ontology
 		["sl"] = <
 			items = <
 				["at0000.1"] = <
-					text = <"*Procedure(en)">
+					text = <"*Procedure - drain (en)">
 					description = <"*A clinical activity carried out for screening, investigative, diagnostic, curative, therapeutic, evaluative or palliative purposes.(en)">
 				>
 				["at0063.1"] = <
@@ -1084,7 +1084,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000.1"] = <
-					text = <"Procedure">
+					text = <"Procedure - drain">
 					description = <"A clinical activity carried out for screening, investigative, diagnostic, curative, therapeutic, evaluative or palliative purposes.">
 				>
 				["at0063.1"] = <
@@ -1279,7 +1279,7 @@ ontology
 		["ar-sy"] = <
 			items = <
 				["at0000.1"] = <
-					text = <"*Procedure(en)">
+					text = <"*Procedure - drain (en)">
 					description = <"*A clinical activity carried out for screening, investigative, diagnostic, curative, therapeutic, evaluative or palliative purposes.(en)">
 				>
 				["at0063.1"] = <
@@ -1468,7 +1468,7 @@ ontology
 		["ru"] = <
 			items = <
 				["at0000.1"] = <
-					text = <"*Procedure(en)">
+					text = <"*Procedure - drain (en)">
 					description = <"*A clinical activity carried out for screening, investigative, diagnostic, curative, therapeutic, evaluative or palliative purposes.(en)">
 				>
 				["at0063.1"] = <
@@ -1657,7 +1657,7 @@ ontology
 		["nb"] = <
 			items = <
 				["at0000.1"] = <
-					text = <"Prosedyre">
+					text = <"*Procedure - drain (en)">
 					description = <"En klinisk aktivitet som er utført i undersøkende, diagnostisk, kurativ, terapeutisk, evaluerende, prognostisk eller palliativ hensikt.">
 				>
 				["at0063.1"] = <
@@ -1852,7 +1852,7 @@ ontology
 		["es"] = <
 			items = <
 				["at0000.1"] = <
-					text = <"Procedimiento">
+					text = <"*Procedure - drain (en)">
 					description = <"Una actividad clínica llevada a cabo para la detección, investigación, diagnóstico, curativos, terapéuticos, de evaluación o con fines paliativos.">
 				>
 				["at0063.1"] = <
@@ -2043,7 +2043,7 @@ ontology
 		["de"] = <
 			items = <
 				["at0000.1"] = <
-					text = <"Prozedur">
+					text = <"*Procedure - drain (en)">
 					description = <"Eine klinische Aktivität, die zur Früherkennung, Untersuchung, Diagnose, Heilung, Therapie, Bewertung oder in Hinsicht auf palliative Maßnahmen durchgeführt wird.">
 				>
 				["at0063.1"] = <
@@ -2238,7 +2238,7 @@ ontology
 		["sv"] = <
 			items = <
 				["at0000.1"] = <
-					text = <"Procedur">
+					text = <"*Procedure - drain (en)">
 					description = <"En klinisk aktivitet utförd för screening, undersökande, diagnostiska, botande, terapeutiska, utvärderande eller palliativa ändamål.">
 				>
 				["at0063.1"] = <
